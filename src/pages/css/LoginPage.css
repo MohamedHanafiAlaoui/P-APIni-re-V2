@@ -1,0 +1,212 @@
+/* Using the same color scheme as your design */
+:root {
+    --color-primary: #4CAF50;
+    --color-primary-dark: #388E3C;
+    --color-accent: #8BC34A;
+    --color-text: #333333;
+    --color-light: #f8f9fa;
+    --color-gray: #e9ecef;
+    --color-white: #ffffff;
+    --color-error: #e74c3c;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --radius: 8px;
+    --transition: all 0.3s ease;
+  }
+  
+  /* Base styles */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-light);
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .login-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    transition: var(--transition);
+  }
+  
+  .login-title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--color-primary-dark);
+    font-size: 1.8rem;
+    font-weight: 700;
+    position: relative;
+  }
+  
+  .login-title::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 60px;
+    background-color: var(--color-primary);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .login-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1rem;
+  }
+  
+  /* Form styles */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    color: var(--color-text);
+    font-size: 0.95rem;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--color-gray);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: var(--color-light);
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+  }
+  
+  .form-group input.error {
+    border-color: var(--color-error);
+    background-color: #fdecea;
+  }
+  
+  .error-message {
+    color: var(--color-error);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+  }
+  
+  .api-error {
+    color: var(--color-error);
+    background-color: #fdecea;
+    padding: 12px;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border: 1px solid var(--color-error);
+    font-size: 0.9rem;
+  }
+  
+  /* Remember me checkbox */
+  .remember-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: -0.5rem 0 0.5rem;
+  }
+  
+  .remember-container input[type="checkbox"] {
+    width: auto;
+  }
+  
+  .remember-container label {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    cursor: pointer;
+  }
+  
+  /* Button styles */
+  .submit-button {
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    font-size: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    margin-top: 0.5rem;
+  }
+  
+  .submit-button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+  }
+  
+  .submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  /* Footer links */
+  .login-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .login-footer a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+  }
+  
+  .login-footer a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+  }
+  
+  .divider {
+    color: #cccccc;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .login-card {
+      padding: 30px;
+      margin: 0 15px;
+    }
+    
+    .login-title {
+      font-size: 1.5rem;
+    }
+    
+    .login-footer {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .divider {
+      display: none;
+    }
+  }
